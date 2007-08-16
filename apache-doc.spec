@@ -4,8 +4,8 @@
 
 Summary:	The apache Manual
 Name:		apache-doc
-Version:	2.2.4
-Release:	%mkrel 3
+Version:	2.2.5
+Release:	%mkrel 0.1
 Group:		System/Servers
 License:	Apache License
 URL:		http://www.apache.org
@@ -82,5 +82,3 @@ fi
 %defattr(-,root,root)
 %doc manual/* README.MDV
 %attr(0644,root,root) %config(noreplace) %{_sysconfdir}/httpd/conf/webapps.d/00_manual.conf
-
-
