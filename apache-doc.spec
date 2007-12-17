@@ -14,7 +14,6 @@ Requires(pre):	apache-conf >= %{version}
 Requires:	apache-conf >= %{version}
 BuildRequires:	apache-source = %{version} file
 BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 This package contains the apache server documentation in HTML format.
