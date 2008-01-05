@@ -4,8 +4,8 @@
 
 Summary:	The apache Manual
 Name:		apache-doc
-Version:	2.2.6
-Release:	%mkrel 1
+Version:	2.2.7
+Release:	%mkrel 0.1
 Group:		System/Servers
 License:	Apache License
 URL:		http://www.apache.org
@@ -28,7 +28,7 @@ web browser and point to this URL: http://localhost/manual
 cp -dpR %{_usrsrc}/apache-%{version}/docs/manual .
 
 cp %{SOURCE0} manual.conf
-perl -pi -e "s|_DOCDIR_|%{_docdir}/%{name}-%{version}|g" manual.conf
+perl -pi -e "s|_DOCDIR_|%{_docdir}/%{name}|g" manual.conf
 
 find . -type d -perm 0700 -exec chmod 755 {} \;
 find . -type f -perm 0555 -exec chmod 755 {} \;
@@ -53,7 +53,7 @@ web browser and point to this URL: http://localhost/manual
 Accessing the HTML manual manually on the filesystem can be tricky, you will have
 to do something like this first:
 
-cd %{_docdir}/%{name}-%{version}
+cd %{_docdir}/%{name}
 for i in \`find -name "*.html.en"\`; do
     new_name=\`echo \$i | sed -e "s/.html.en/.html/g"\`
     mv -f \$i \$new_name
