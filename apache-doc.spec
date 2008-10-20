@@ -4,7 +4,7 @@
 
 Summary:	The apache Manual
 Name:		apache-doc
-Version:	2.2.9
+Version:	2.2.10
 Release:	%mkrel 1
 Group:		System/Servers
 License:	Apache License
@@ -41,7 +41,7 @@ find . -type f|xargs file|grep 'text'|cut -d: -f1|xargs perl -p -i -e 's/\r//'
 %build
 
 %install
-[ "%{buildroot}" != "/" ] && rm -rf %{buildroot} 
+rm -rf %{buildroot} 
 
 install -d %{buildroot}%{_sysconfdir}/httpd/conf/webapps.d
 install -m0644 manual.conf %{buildroot}%{_sysconfdir}/httpd/conf/webapps.d/00_manual.conf
@@ -76,7 +76,7 @@ if [ "$1" = "0" ]; then
 fi
 
 %clean
-[ "%{buildroot}" != "/" ] && rm -rf %{buildroot} 
+rm -rf %{buildroot} 
 
 %files
 %defattr(-,root,root)
