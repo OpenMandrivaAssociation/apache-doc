@@ -5,14 +5,14 @@
 Summary:	The apache Manual
 Name:		apache-doc
 Version:	2.2.14
-Release:	%mkrel 1
+Release:	%mkrel 2
 Group:		System/Servers
 License:	Apache License
 URL:		http://www.apache.org
 Source0:	manual.conf
 Requires(pre):	apache-conf >= %{version}
 Requires:	apache-conf >= %{version}
-BuildRequires:	apache-source = %{version} file
+BuildRequires:	apache-source = %{version}
 BuildArch:	noarch
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
@@ -33,10 +33,6 @@ perl -pi -e "s|_DOCDIR_|%{_docdir}/%{name}|g" manual.conf
 find . -type d -perm 0700 -exec chmod 755 {} \;
 find . -type f -perm 0555 -exec chmod 755 {} \;
 find . -type f -perm 0444 -exec chmod 644 {} \;
-
-# strip away annoying ^M
-find . -type f|xargs file|grep 'CRLF'|cut -d: -f1|xargs perl -p -i -e 's/\r//'
-find . -type f|xargs file|grep 'text'|cut -d: -f1|xargs perl -p -i -e 's/\r//'
 
 %build
 
