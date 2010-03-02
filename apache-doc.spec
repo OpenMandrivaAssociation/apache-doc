@@ -4,8 +4,8 @@
 
 Summary:	The apache Manual
 Name:		apache-doc
-Version:	2.2.14
-Release:	%mkrel 2
+Version:	2.2.15
+Release:	%mkrel 0.0
 Group:		System/Servers
 License:	Apache License
 URL:		http://www.apache.org
@@ -63,7 +63,7 @@ EOF
 %if %mdkversion < 201010
 %_post_webapp
 %endif
-    
+
 %postun
 %if %mdkversion < 201010
 %_postun_webapp
