@@ -4,7 +4,7 @@
 
 Summary:	The apache Manual
 Name:		apache-doc
-Version:	2.2.20
+Version:	2.2.21
 Release:	%mkrel 1
 Group:		System/Servers
 License:	Apache License
