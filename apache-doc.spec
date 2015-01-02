@@ -4,8 +4,8 @@
 
 Summary:	The apache Manual
 Name:		apache-doc
-Version:	2.4.3
-Release:	9
+Version:	2.4.10
+Release:	1
 Group:		System/Servers
 License:	Apache License
 URL:		http://www.apache.org
