@@ -4,7 +4,7 @@
 
 Summary:	The apache Manual
 Name:		apache-doc
-Version:	2.4.10
+Version:	2.4.12
 Release:	1
 Group:		System/Servers
 License:	Apache License
