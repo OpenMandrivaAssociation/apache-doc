@@ -5,7 +5,7 @@
 Summary:	The apache Manual
 Name:		apache-doc
 Version:	2.4.12
-Release:	2
+Release:	3
 Group:		System/Servers
 License:	Apache License
 URL:		http://www.apache.org
