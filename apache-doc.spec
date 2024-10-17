@@ -8,7 +8,7 @@ Version:	2.4.12
 Release:	3
 Group:		System/Servers
 License:	Apache License
-URL:		http://www.apache.org
+URL:		https://www.apache.org
 Source0:	manual.conf
 Requires(pre):	apache-conf >= %{version}
 Requires:	apache-conf >= %{version}
